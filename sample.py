@@ -8,13 +8,18 @@ def generate_list(number: int) -> list:
 def multiply(vec: list) -> float:
     prod = 1
     for el in vec:
-        prod = prod * el
+        prod = prod * el * 2
     return prod
     
     
 if __name__ == '__main__':
     n = input("insert value ")
     n = int(n)
+
+    if n < 0:
+        print("n must be positive")
+        exit(1)
+
     generated = generate_list(n)
     
     print("product = " + str(multiply(generated)))
